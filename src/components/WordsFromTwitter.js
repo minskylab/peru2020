@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import React from "react";
 import useAxios from "@use-hooks/axios";
 import ReactWordcloud from "react-wordcloud";
 
-const WordsFromTwitter = () => {
+const WordsFromTwitter = props => {
 	const { response, loading, error, reFetch } = useAxios({
-		url: "http://192.168.8.135:8080/freqs",
+		url: props.endpoint || "",
 		method: "GET",
 		trigger: ""
 	});
@@ -37,7 +36,7 @@ const WordsFromTwitter = () => {
 					],
 					enableTooltip: true,
 					deterministic: false,
-					fontFamily: "verdana",
+					fontFamily: "Roboto",
 					fontSizes: [ 9, 40 ],
 					fontStyle: "normal",
 					fontWeight: 500,
