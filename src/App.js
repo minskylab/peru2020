@@ -22,7 +22,7 @@ const App = () => {
 		<AppContainer>
 			<AppHeader>
 				<Drawer />
-				<WordsFromTwitter endpoint={"http://192.168.8.135:8080/freqs"} />
+				<WordsFromTwitter endpoint={"wss://192.168.8.135:8080/freqs"} />
 			</AppHeader>
 		</AppContainer>
 	);
