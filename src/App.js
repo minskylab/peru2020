@@ -22,7 +22,7 @@ const App = () => {
 		<AppContainer>
 			<AppHeader>
 				<Drawer />
-				<WordsFromTwitter endpoint={"wss://192.168.8.135:8080/freqs"} />
+				<WordsFromTwitter endpoint={"https://peru2020scrapper.minsky.cc/freqs"} />
 			</AppHeader>
 		</AppContainer>
 	);
