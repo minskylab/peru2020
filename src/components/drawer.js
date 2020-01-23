@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 
-const Container = styled.div`
+const Container = styled.div `
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -14,7 +14,7 @@ const Container = styled.div`
 	background-color: blue;
 `;
 
-const SideBar = styled.div`
+const SideBar = styled.div `
 	display: flex;
 	flex-direction: column;
 	height: auto;
@@ -87,8 +87,12 @@ const CardTitle = styled.div`
 
 const CardText = styled.div``;
 
-const Drawer = () => {
-	const [ isShown, setIsShown ] = useState(false);
+const Drawer = props => {
+	const [ isShown, setIsShown ] = useState(props.activate || false);
+	useEffect(() => {
+		setIsShown(props.activate)
+		return () => {};
+	}, [props.activate])
 	return (
 		<Container>
 			<SideBar active={isShown} onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>

@@ -8,9 +8,9 @@ const WordsFromTwitter = props => {
 		method: "GET",
 		trigger: ""
 	});
+	props.loading(loading);
 	if (loading) return <p> Cargando... </p>;
 	if (error) return <p> Estamos trabajando... </p>;
-	console.log(response, loading, error);
 	if (response)
 		return (
 			<ReactWordcloud

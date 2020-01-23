@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import styled from "styled-components";
 import Drawer from "./components/drawer";
@@ -18,11 +18,12 @@ const AppHeader = styled.header`
 `;
 
 const App = () => {
+	const [ isLoading, setIsLoading ] = useState(false);
 	return (
 		<AppContainer>
 			<AppHeader>
-				<Drawer />
-				<WordsFromTwitter endpoint={"https://peru2020scrapper.minsky.cc/freqs"} />
+				<Drawer activate={isLoading} />
+				<WordsFromTwitter endpoint={"https://peru2020scrapper.minsky.cc/freqs"} loading={l => setIsLoading(l)} />
 			</AppHeader>
 		</AppContainer>
 	);
