@@ -18,12 +18,12 @@ const AppHeader = styled.header`
 `;
 
 const App = () => {
-	const [ isLoading, setIsLoading ] = useState(false);
+	const [ isActivate, setIsActivated ] = useState(false);
 	return (
 		<AppContainer>
+			<Drawer activate={isActivate} />
 			<AppHeader>
-				<Drawer activate={isLoading} />
-				<WordsFromTwitter endpoint={"https://peru2020scrapper.minsky.cc/freqs"} loading={l => setIsLoading(l)} />
+				<WordsFromTwitter endpoint={"https://peru2020scrapper.minsky.cc/freqs"} loading={l => setIsActivated(l)} />
 			</AppHeader>
 		</AppContainer>
 	);

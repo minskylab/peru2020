@@ -22,6 +22,7 @@ const SideBar = styled.div `
 	/* pointer-events: none; */
 	max-height: calc(100vh - 120px);
 	width: 17vw;
+	min-width: 100px;
 	transition: 0.3s;
 	${props => {
 		if (props.active) {
