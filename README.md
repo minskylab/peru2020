@@ -9,3 +9,5 @@ Se ha realizado el ejemplo en el framework ReactJS, revisa el package.json para 
 Usa yarn start para visualizar y seguir trabajando el proyecto en modo dev. El proyecto se encuentra subido en con el link http://peru2020.minsky.cc/
 
 El proyecto es de libre acceso y uso, sigan programando! 
+
+![diagram](peru2020web.png)
